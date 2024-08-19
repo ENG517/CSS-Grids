@@ -13,8 +13,8 @@ jobs:
       - name: Build HTML5 + Bootstrap
         uses: dita-ot/dita-ot-action@master
         with:
-          plugins: |
-            net.infotexture.dita-bootstrap
+          # plugins: |
+          #   net.infotexture.dita-bootstrap
           input: document.ditamap
           transtype: html5-bootstrap
           output-path: out
