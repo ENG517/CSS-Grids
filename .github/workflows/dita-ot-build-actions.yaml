@@ -1,3 +1,5 @@
+# DITA-OT-ACTION - Build Github Actions with the DITA Open Toolkit
+# SRC: https://github.com/dita-ot/dita-ot-action
 name: CI
 'on':
   push:
@@ -6,44 +8,39 @@ name: CI
 jobs:
   build-dita:
     permissions:
+      # Neeed to grant 'write' permissions to this Github Action sequence
       contents: write
-    name: Example Building of CSS Grid DITA
+    
+    name: Building of example CSS Grid DITA model
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Build HTML5
+      
+      # Buil HTML5
+      - name: Build HTML5 output
         uses: dita-ot/dita-ot-action@master
         with:
-          # plugins: |
-          #   net.infotexture.dita-bootstrap
+          # Choose which map to use
           input: _supermap.ditamap
           transtype: html5
           output-path: out
 
-      - name: Build PDF
+      # Build PDF
+      - name: Build PDF output
         uses: dita-ot/dita-ot-action@master
-        with:
-          install: |
-            # Run some arbitrary installation commands
-            # apt-get update -q
-            # apt-get install -qy --no-install-recommends nodejs
-            # nodejs -v
-
-            # Install plugins
-            # dita install fox.jason.extend.css
-            # dita install org.doctales.xmltask
-            # dita install fox.jason.prismjs
           build: |
             # Use the dita command line
-            dita -i _supermap.ditamap -o out -f pdf --filter=filter1.ditaval
+            dita -i _supermap.ditamap -o out -f pdf --theme themes/sample-theme-pdf.yaml
 
+      # BUILD Zipped Archive of outputs
       - name: Upload DITA Output to a ZIP file
         uses: actions/upload-artifact@v2
         with:
           name: dita-artifact
           path: 'out'
 
+      # Deploy the HTML site to the gh-pages branch
       - name: Deploy DITA Output to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
