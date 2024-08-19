@@ -32,10 +32,10 @@ jobs:
         with:
           install:
             # Install plugins
-            fox.jason.extend.css
-            net.infotexture.dita-bootstrap
-
-          build: dita --input='_supermap.ditamap' --format=html5-bootstrap --output='out'
+            dita install fox.jason.extend.css
+            dita install net.infotexture.dita-bootstrap
+          build: |
+            dita -i _supermap.ditamap  -o out -f html5-bootstrap
 
       # Build PDF
       - name: Build PDF output
