@@ -10,13 +10,13 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Build HTML5 + Bootstrap
+      - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
         with:
           # plugins: |
           #   net.infotexture.dita-bootstrap
           input: document.ditamap
-          transtype: html5-bootstrap
+          transtype: html5
           output-path: out
 
       - name: Build PDF
