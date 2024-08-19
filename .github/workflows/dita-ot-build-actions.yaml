@@ -24,14 +24,14 @@ jobs:
         with:
           install: |
             # Run some arbitrary installation commands
-            apt-get update -q
-            apt-get install -qy --no-install-recommends nodejs
-            nodejs -v
+            # apt-get update -q
+            # apt-get install -qy --no-install-recommends nodejs
+            # nodejs -v
 
             # Install plugins
-            dita install fox.jason.extend.css
+            # dita install fox.jason.extend.css
             # dita install org.doctales.xmltask
-            dita install fox.jason.prismjs
+            # dita install fox.jason.prismjs
           build: |
             # Use the dita command line
             dita -i _supermap.ditamap -o out -f pdf --filter=filter1.ditaval
