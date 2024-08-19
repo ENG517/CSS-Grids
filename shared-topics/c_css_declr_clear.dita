@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
-  "/plugins/org.oasis-open.dita.v1_2/dentry/technicalContent/dentry/concept.dentry">
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 
 <concept id="c-clear-property" xml:lang="en-us">
 
