@@ -15,7 +15,7 @@ jobs:
         with:
           plugins: |
             net.infotexture.dita-bootstrap
-          input: _supermap.ditamap
+          input: document.ditamap
           transtype: html5-bootstrap
           output-path: out
 
@@ -34,7 +34,7 @@ jobs:
             dita install fox.jason.prismjs
           build: |
             # Use the dita command line
-            dita -i _supermap.ditamap -o out -f pdf --filter=filter1.ditaval
+            dita -i document.ditamap -o out -f pdf --filter=filter1.ditaval
 
       - name: Upload DITA Output to a ZIP file
         uses: actions/upload-artifact@v2
