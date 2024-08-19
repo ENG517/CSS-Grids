@@ -30,8 +30,7 @@ jobs:
       - name: Build HTML Bootstrap output
         uses: dita-ot/dita-ot-action@master
         with:
-          install:
-            # Install plugins
+          install: |
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
           build: |
