@@ -32,8 +32,8 @@ jobs:
         with:
           install:
             # Install plugins
-            dita install fox.jason.extend.css
-            dita install net.infotexture.dita-bootstrap
+            fox.jason.extend.css
+            net.infotexture.dita-bootstrap
 
           build: dita --input='_supermap.ditamap' --format=html5-bootstrap --output='out'
 
