@@ -17,7 +17,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
       
-      # Buil HTML5
+      # Build HTML5
       - name: Build HTML5 output
         uses: dita-ot/dita-ot-action@master
         with:
@@ -25,6 +25,18 @@ jobs:
           input: _supermap.ditamap
           transtype: html5
           output-path: out
+
+      # Build HTML Bootstrap theme
+      - name: Build HTML Bootstrap output
+        uses: dita-ot/dita-ot-action@master
+        with:
+          install:
+            # Install plugins
+            dita install fox.jason.extend.css
+            dita install net.infotexture.dita-bootstrap
+
+        build: |
+          dita --input='_supermap.ditamap' --format=html5-bootstrap --output='out'
 
       # Build PDF
       - name: Build PDF output
