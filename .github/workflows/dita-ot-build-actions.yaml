@@ -30,7 +30,7 @@ jobs:
 
             # Install plugins
             dita install fox.jason.extend.css
-            dita install org.doctales.xmltask
+            # dita install org.doctales.xmltask
             dita install fox.jason.prismjs
           build: |
             # Use the dita command line
