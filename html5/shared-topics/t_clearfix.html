@@ -1,0 +1,23 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2024"><meta name="generator" content="DITA-OT"><title>Coding a clear-fix hack</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="clear-fix"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Coding a clear-fix hack</h1>
+  
+
+  <div class="body taskbody">
+      <section><div class="ol steps"><div class="li step p" id="clear-fix__cf-step">
+          <span class="ph cmd">
+            In your CSS file, use the <a class="xref" href="c_css_declr_clear.html" title="The CSS 'clear' property helps web designers control block-level elients in relationship to 'floated' boxes."><code class="ph codeph">clear</code></a> declaration inside an <a class="xref" href="c_css_pseudo_elem_after.html" title="Enter short description."><code class="ph codeph">:after</code></a> pseudo-element on a new <code class="ph codeph">.cf</code> class to clear <a class="xref" href="c_css_val_both.html" title="Enter short description."><code class="ph codeph">both</code></a> right and left sides of the parent containing block.</span>
+          <div class="itemgroup stepxmp">
+<pre class="pre codeblock"><code>
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</code></pre>
+          </div>
+        </div></div></section>
+
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="c_css_declr_clear.html" title="The CSS 'clear' property helps web designers control block-level elients in relationship to 'floated' boxes.">The 'clear' property: How to position boxes next to floats</a></div></div></nav></article></main></body></html>
