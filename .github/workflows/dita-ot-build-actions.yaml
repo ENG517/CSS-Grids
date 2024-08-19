@@ -34,7 +34,7 @@ jobs:
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
           build: |
-            dita -i _supermap.ditamap  -o out/bootstrap -f html5-bootstrap
+            dita -i _supermap.ditamap  -o out/bootstrap -f html5-bootstrap --bootstrap.theme=minty
 
       # Build PDF
       - name: Build PDF output
