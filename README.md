@@ -1,8 +1,16 @@
 # DITA CSS Documentation Projects
 
-This repo contains documentation related to writing grid layouts in HTML and CSS. The documentation is written in DITA (Darwin Information Type Architecture) and serves as an example repo for the Reusable Content project in the University of Minnesota-Twin Cities course: [Writing with Digital Technologies](http://4662wf15.clindgrencv.com/) (WRIT 4662w).
+This repo contains documentation related to writing grid layouts in HTML and CSS. The documentation is written in DITA (Darwin Information Type Architecture) and serves as an example repo for my ENG 517 - Advanced Technical Writing, Editing, and Design course at North Carolina State University.
 
-## Building DITA Transformations
+## Building Outputs with Github Actions
+
+This repo uses Github Actions to create outputs. Refer to the following for details: 
+
+- [.github/workflows/dita-ot-build-actions.yaml](.github/workflows/dita-ot-build-actions.yaml)
+- [DITA User Docs - Using Github Actions](https://www.dita-ot.org/dev/topics/using-github-actions)
+- [DITA Example YAML files](https://github.com/dita-ot/docs/blob/develop/samples/github-actions/build-using-a-project-file.yaml)
+
+## Building Outputs Manually with the Command Line
 
 See the DITA-OT user guide about how to generate output: [http://www.dita-ot.org/2.1/getting-started/using-dita-command.html](http://www.dita-ot.org/2.1/getting-started/using-dita-command.html)
 
