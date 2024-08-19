@@ -5,6 +5,8 @@ name: CI
       - main
 jobs:
   build-dita:
+    permissions:
+      contents: write
     name: Example Building of CSS Grid DITA
     runs-on: ubuntu-latest
     steps:
