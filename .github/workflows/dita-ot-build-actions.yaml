@@ -30,7 +30,7 @@ jobs:
       - name: Build PDF output
         uses: dita-ot/dita-ot-action@master
           build: |
-            dita -i _supermap.ditamap -o out -f pdf --theme=themes/sample-theme-pdf.yaml
+            dita -i _supermap.ditamap --theme='themes/sample-theme-pdf.yaml' -o out -f pdf
 
       # BUILD Zipped Archive of outputs
       - name: Upload DITA Output to a ZIP file
