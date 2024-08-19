@@ -31,7 +31,7 @@ jobs:
         uses: dita-ot/dita-ot-action@master
           build: |
             # Use the dita command line
-            dita -i _supermap.ditamap -o out -f pdf -theme themes/sample-theme-pdf.yaml
+            dita -i _supermap.ditamap -o out -f pdf --theme=themes/sample-theme-pdf.yaml
 
       # BUILD Zipped Archive of outputs
       - name: Upload DITA Output to a ZIP file
